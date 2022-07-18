@@ -1,0 +1,4 @@
+include Readme.md MANIFEST.in
+
+# See https://github.com/pypa/setuptools/issues/3341
+# for when we can include this into the toml

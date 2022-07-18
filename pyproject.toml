@@ -1,0 +1,25 @@
+[build-system]
+requires = [
+    "setuptools>=45", "setuptools_scm[toml]>=6.2"
+]
+build-backend = 'setuptools.build_meta'
+
+[tool.setuptools_scm]
+write_to = "freecad/workbench_template/version.py"
+
+# See https://setuptools.pypa.io/en/latest/userguide/pyproject_config.html
+[project]
+name = "freecad.workbench_template"
+description = "Template for a freecad extensions, installable with pip"
+readme = "Readme.md"
+requires-python = ">=3.8"
+keywords = ["freecad"]
+license = {text = "LGPL-2.1"}
+dependencies = [
+    # should be satisfied by FreeCAD's system dependencies already)
+    "numpy",
+]
+dynamic = ["version"]
+
+[tool.setuptools]
+packages = ["freecad", 'freecad.workbench_template']
